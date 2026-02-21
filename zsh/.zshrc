@@ -7,6 +7,7 @@ ZSH_THEME="robbyrussell"
 # Oh My Zsh 플러그인
 plugins=(
     git                        # git 명령어 alias 및 자동완성
+    kubectl sudo
     zsh-autosuggestions        # 히스토리 기반 명령어 자동 제안
     zsh-syntax-highlighting    # 명령어 구문 하이라이팅
 )
@@ -20,3 +21,6 @@ source $ZSH/oh-my-zsh.sh
 # mise 런타임 버전 관리자 활성화
 eval "$(mise activate zsh)"
 eval "$(uv generate-shell-completion zsh)"
+
+# bun global 설치 라이브러리를 위함
+export PATH="$HOME/.bun/bin:$PATH"
